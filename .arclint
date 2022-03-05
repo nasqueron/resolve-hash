@@ -1,0 +1,29 @@
+{
+    "linters": {
+        "chmod": {
+            "type": "chmod"
+        },
+        "filename": {
+            "type": "filename"
+        },
+        "json": {
+            "type": "json",
+            "include": [
+                "(^\\.arcconfig$)",
+                "(^\\.arclint$)",
+                "(\\.json$)"
+            ]
+        },
+        "python": {
+            "type": "flake8",
+            "severity": {
+                "E203": "disabled",
+                "F821": "advice"
+            },
+            "include": [
+                "(^bin/resolve-hash$)",
+                "(\\.py$)"
+            ]
+        }
+    }
+}

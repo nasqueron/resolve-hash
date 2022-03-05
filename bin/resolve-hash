@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+#   -------------------------------------------------------------
+#   Resolve hash
+#   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+#   Project:        Nasqueron
+#   Description:    Query various sources with a known hash
+#                   like Phabricator, Gerrit or GitHub to offer
+#                   hash information URL from a VCS hash.
+#   License:        BSD-2-Clause
+#   -------------------------------------------------------------
+
+import sys
+
+from resolvehash.resolvehash import find_hash, parse_config
+
+
+def run(needle_hash):
+    result = find_hash(parse_config(), needle_hash)
+    if not result:
+        sys.exit(1)
+
+    print(result)
+
+
+if __name__ == "__main__":
+    argc = len(sys.argv)
+    if argc < 2:
+        print(f"Usage: {sys.argv[0]} <hash>", file=sys.stderr)
+        sys.exit(1)
+
+    run(sys.argv[1])
