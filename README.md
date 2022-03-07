@@ -18,7 +18,7 @@ Allow to resolve a hash to a known URL representation.
 $ resolve-hash 8d8645468228
 https://devcentral.nasqueron.org/rKERUALD8d8645468228
 
-$ resolve-hash 00000000000000                                                                                                                                               (git)-[main] 
+$ resolve-hash 00000000000000
 https://github.com/seungwonpark/ghudegy-chain/commit/00000000000000c06d2e8c36f247206a9a4b1c63
 
 $ resolve-hash not_a_hash
