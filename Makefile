@@ -28,7 +28,7 @@ test:
 #   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 reformat:
-	find bin -type f -name '*.py' | xargs ${REFORMAT}
+	find bin -type f | xargs ${REFORMAT}
 	find src -type f -name '*.py' | xargs ${REFORMAT}
 	find tests -type f -name '*.py' | xargs ${REFORMAT}
 
